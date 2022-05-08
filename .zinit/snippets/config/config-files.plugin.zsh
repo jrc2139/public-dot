@@ -227,7 +227,6 @@ zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview \
 zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
 
 
-bindkey '^ ' autosuggest-accept
 bindkey '^[[1;5C' forward-word   # [Ctrl-RightArrow] - move forward one word
 bindkey '^[[1;5D' backward-word  # [Ctrl-LeftArrow]  - move backward one word
 bindkey -s '^[[5~' ''            # Do nothing on pageup and pagedown. Better than printing '~'.
