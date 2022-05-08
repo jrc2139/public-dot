@@ -83,7 +83,7 @@ chwpd_dir_history_funcs=("_dircycle_update_cycled" ".zinit-cd")
 export GI_TEMPLATE="${ZPFX}/git-ignore-template"
 export OPENCV_LOG_LEVEL=ERROR # Hide nonimportant errors for howdy
 export rm_opts=(-I -v)
-export EDITOR=micro
+export EDITOR=nvim
 export SYSTEMD_EDITOR=${EDITOR}
 export GIT_DISCOVERY_ACROSS_FILESYSTEM=true # etckeeper on bedrock
 
@@ -227,7 +227,7 @@ zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview \
 zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
 
 
-# bindkey '^ ' autosuggest-accept
+bindkey '^ ' autosuggest-accept
 bindkey '^[[1;5C' forward-word   # [Ctrl-RightArrow] - move forward one word
 bindkey '^[[1;5D' backward-word  # [Ctrl-LeftArrow]  - move backward one word
 bindkey -s '^[[5~' ''            # Do nothing on pageup and pagedown. Better than printing '~'.
