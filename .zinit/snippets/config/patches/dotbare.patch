@@ -6,7 +6,7 @@ Allow dotbare to be symlinked
  #     check sub commands for available option flags
 
 -mydir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-+mydir="$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")"
++mydir="$(dirname -- "$(greadlink -f -- "$BASH_SOURCE")")"
  source "${mydir}"/helper/set_variable.sh
 
  function usage() {
