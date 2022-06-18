@@ -215,6 +215,7 @@ zstyle ':fzf-tab:*' accept-line enter         # Accept selected entry on enter
 zstyle ':fzf-tab:*' fzf-pad 4
 zstyle ':fzf-tab:*' prefix ''                 # No dot prefix
 zstyle ':fzf-tab:*' single-group color header # Show header for single groups
+zstyle ':fzf-tab:*' switch-group ';' "'"      # Switch groups using ; and single quote
 zstyle ':fzf-tab:complete:man:*' fzf-preview 'man ${${=group}[4]} $word | col -bx | bat -l man -p --color always'
 zstyle ':fzf-tab:complete:(cd|ls|lsd):*' fzf-preview '[[ -d $realpath ]] && ls -1 --color=always -- $realpath'
 zstyle ':fzf-tab:complete:((micro|cp|rm|bat):argument-rest|kate:*)' fzf-preview 'bat --color=always -- $realpath 2>/dev/null || ls --color=always -- $realpath'
@@ -235,4 +236,3 @@ bindkey '^[[3;5~' kill-word      # ctrl+del   delete next word
 bindkey '^I' expand-or-complete-prefix # Fix autopair completion within brackets
 bindkey '^H' backward-kill-word
 #bindkey '^h' _complete_help
-
